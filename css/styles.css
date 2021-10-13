@@ -5,7 +5,15 @@
   justify-content: space-between;
   height: 100%;
 }
+@media (max-width: 1150px) {
+  .wrapper {
+    max-width: 1040px;
+    min-width: 960px;
+    /* width: 1040px; */
+  }
+}
 
+}
 .text {
   font-family: 'Open Sans';
 }
@@ -50,7 +58,7 @@
 }
 .title--underline-white-left {
   padding-bottom: 35px;
-  margin: 0 0 38px 0;
+  margin: 0 0 36px 0;
 }
 .title--underline-white-left::after {
   content: '';
@@ -118,6 +126,9 @@
 .header {
   background-color: #000;
   height: 70px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 .header__wrapper {
   align-items: center;
@@ -139,13 +150,27 @@
   line-height: 1.2;
   font-weight: 600;
   color: #fff;
+  cursor: pointer;
+  padding: 0 0 3px 0;
 }
+.header__link:hover {
+  padding: 0 0 1px 0;
+  border-bottom: 2px solid #ff8b38;
+}
+
 .main {
-  height: 711px;
-  background-color: #9a9a9a;
+  max-height: 641px;
+  background-image: url('../images/header_panel.png');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  padding: 110px 0 141px 0;
 }
-.main__logo{
-  margin: 110px 0 30px 0;
+.main__logo {
+  margin: 0 0 27px 0;
+}
+.main__title {
+  max-width: 517px;
+  line-height: 1.2;
 }
 .main__description {
   opacity: 0.8;
@@ -163,12 +188,13 @@
   height: 360px;
   background-color: #fff;
   border-radius: 2px;
-  margin: 141px 0 0 0;
+  margin: 30px 0 0 0;
 }
 .form__title {
   display: flex;
   align-items: center;
   justify-content: center;
+  line-height: 1.2;
   height: 54px;
   font-family: 'Open Sans';
   font-size: 20px;
@@ -199,12 +225,22 @@
   border: none;
   box-shadow: 0px 1px 0px 0px rgba(0,0,1,0.15);
 }
+.form__item:focus {
+  outline: none;
+}
 .form__button {
   color: #fff;
   background-color: #ff9b51;
   padding: 21px 0 20px 0;
   border-radius: 0 0 2px 2px;
 }
+@media (max-width: 1150px) {
+  .main {
+    padding: 40px 0 71px 0;
+    max-width:
+  }
+}
+
 .social {
   height: 105px;
   background-color: #fff;
@@ -227,11 +263,14 @@
 .socials__link {
   text-decoration: none;
 }
+.socials__link:hover {
+  color: #ff8b38;
+}
 .social__link-list {
   width: 636px;
 }
 .social__list-item {
-  font-size: 48px;
+  font-size: 44px;
   line-height: 1.2;
   font-weight: 400;
   color: #ccc;
@@ -290,31 +329,24 @@
   font-weight: 600;
   color: #fff;
 }
+
 .sublist-section {
   min-height: 596px;
   background-color: #fff;
-  padding: 127px 0 0 0;
+  padding: 107px 0 0 0;
 }
 .sublist-section__wrapper {
   flex-direction: row;
 }
-.feature-image {
-  width: 453px;
-  height: 303px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #9a9a9a;
-  box-shadow: 0 10px 15px 0 rgba(0,0,0,0.2);
-  font-family: 'Open Sans';
-  font-size: 33.1px;
-  line-height: 1.2;
-  color: #b0b0b0;
-  text-align: center;
+.sublist-section__img {
+  max-width: 525px;
+  max-height: 375px;
+  width: 45%;
+  height: 100%;
 }
 .sublist-section__text {
-  width: 435px;
-  margin: -23px 0 0 0;
+  max-width: 435px;
+  width: 45%;
 }
 .sublist-section__description {
   margin: 0 0 43px 0;
@@ -353,19 +385,30 @@
   font-weight: 600;
   color: #212121;
 }
+@media (max-width: 1040px) {
+  .sublist-section__wrapper {
+    justify-content: flex-start;
+  }
+  .sublist-section__img {
+    margin: 0 5% 0 0;
+  }
+}
+
 .picture-section {
   height: 524px;
   background-color: #f5f5f5;
-  padding: 107px 0 0 0;
+  padding: 75px 0 0 0;
 }
 .picture-section__text {
+  padding: 37px 0 0 0;
   max-width: 475px;
 }
 .picture-section__img {
-  margin: -23px 0 0 0;
+  width: 525px;
+  height: 375px;
 }
 .awesome {
-  min-height: 592px;
+  height: 592px;
   background-color: #fff;
   padding: 108px 0 105px 0;
 }
@@ -572,8 +615,10 @@
 }
 .additional {
   height: 320px;
-  background-color: #9a9a9a;
   padding: 74px 0 63px 0;
+  background-image: url('../images/custom_panel.png');
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .additional__wrapper {
   flex-direction: column;
@@ -628,6 +673,9 @@
   font-weight: 400;
   color: #bdbdbd;
 }
+.contacts__form-left-item:focus {
+  outline: none;
+}
 .contacts__textarea {
   width: 527px;
   height: 155px;
@@ -641,6 +689,9 @@
   font-weight: 400;
   color: #bdbdbd;
 }
+.contacts__textarea:focus {
+  outline: none;
+}
 .contacts__button {
   min-width: 148px;
   min-height: 46px;
@@ -650,7 +701,7 @@
   color: #fff;
 }
 .page-footer {
-  height: 100px;
+  height: 84px;
   background-color: #000;
   padding: 20px 0 15px 0;
 }
