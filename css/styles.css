@@ -1,27 +1,29 @@
+/* перекодировать картинки в webp */
+/* задать размеры относительными величинами по возможности */
+.header,
+.main,
+.footer {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
 .wrapper {
   margin: 0 auto;
   width: 1110px;
   display: flex;
   justify-content: space-between;
   height: 100%;
+  padding: 0 15px;
 }
 @media (max-width: 1150px) {
   .wrapper {
     max-width: 1040px;
     min-width: 960px;
-    /* width: 1040px; */
   }
 }
-
-}
-.text {
-  font-family: 'Open Sans';
-}
-
 .title {
-  font-family: Raleway, sans-serif;
-  text-transform: uppercase;
+  font-family: Raleway, Arial, Helvetica, sans-serif;
   font-size: 36px;
+  text-transform: uppercase;
   position: relative;
   color: #212121;
 }
@@ -87,7 +89,6 @@
   background-color: #fff;
   box-shadow: 0 5px 5px rgba(0,0,0,0.2);
 }
-
 .small-title {
   font-size: 20px;
   line-height: 1.2;
@@ -95,32 +96,29 @@
   color: #212121;
   position: relative;
 }
-
 .description {
-  font-family: 'Open Sans';
-  font-size: 14px;
   line-height: 20px;
-  font-weight: 400;
   color: #86878b;
 }
-
-.button {
+.btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   font-size: 15px;
   font-weight: 600;
+  padding: 0;
+  color: #fff;
 }
-.button--white {
+.btn--white {
   width: 135px;
   height: 42px;
-  color: #fff;
+  background: none;
   border: 2px solid #fff;
 }
-.button--orange {
+.btn--orange {
   border-radius: 3px;
+  border: none;
   background-color: #ff8b38;
 }
 .header {
@@ -136,16 +134,15 @@
 .header__logo {
   width: 79px;
 }
-.header__menu {
+.menu__list {
   width: 442px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.header__link {
+.menu__link {
   text-decoration: none;
   opacity: 0.69;
-  font-family: 'Open Sans';
   font-size: 14px;
   line-height: 1.2;
   font-weight: 600;
@@ -153,35 +150,34 @@
   cursor: pointer;
   padding: 0 0 3px 0;
 }
-.header__link:hover {
+.menu__link:hover {
   padding: 0 0 1px 0;
   border-bottom: 2px solid #ff8b38;
 }
-
-.main {
+.cover {
   max-height: 641px;
-  background-image: url('../images/header_panel.png');
+  background-image: url('../images/header_panel.webp');
   background-repeat: no-repeat;
   background-position: center bottom;
   padding: 110px 0 141px 0;
 }
-.main__logo {
+.cover__logo {
   margin: 0 0 27px 0;
 }
-.main__title {
+.cover__title {
   max-width: 517px;
   line-height: 1.2;
 }
-.main__description {
+.cover__description {
   opacity: 0.8;
-  font-family: Raleway;
+  font-family: Raleway, Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 23px;
   font-weight: 300;
   color: #fff;
   margin: 0 0 40px 0;
 }
-.main__form {
+.cover__form {
   display: flex;
   flex-direction: column;
   width: 360px;
@@ -196,7 +192,6 @@
   justify-content: center;
   line-height: 1.2;
   height: 54px;
-  font-family: 'Open Sans';
   font-size: 20px;
   font-weight: 700;
   color: #333;
@@ -217,9 +212,8 @@
   width: 285px;
   height: 31px;
   padding: 0 0 0 14.5px;
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   font-size: 14px;
-  line-height: 1.2;
   font-weight: 400;
   color: #bdbdbd;
   border: none;
@@ -228,19 +222,23 @@
 .form__item:focus {
   outline: none;
 }
-.form__button {
+.form__btn {
+  width: 360px;
+  height: 54px;
+  border: none;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
   color: #fff;
   background-color: #ff9b51;
-  padding: 21px 0 20px 0;
   border-radius: 0 0 2px 2px;
 }
 @media (max-width: 1150px) {
-  .main {
+  .cover {
     padding: 40px 0 71px 0;
-    max-width:
+    /* max-width: */
   }
 }
-
 .social {
   height: 105px;
   background-color: #fff;
@@ -271,8 +269,6 @@
 }
 .social__list-item {
   font-size: 44px;
-  line-height: 1.2;
-  font-weight: 400;
   color: #ccc;
 }
 .tabs-block {
@@ -290,9 +286,7 @@
   justify-content: center;
   width: 112px;
   height: 112px;
-  font-family: 'Open Sans';
   font-size: 15px;
-  line-height: 20px;
   font-weight: 700;
   color: #fff;
   background-color: #333;
@@ -321,15 +315,10 @@
   width: 320px;
   height: 253px;
 }
-.tabs-block__button {
+.tabs-block__btn {
   width: 121px;
   height: 46px;
-  font-family: 'Open Sans';
-  font-size: 15px;
-  font-weight: 600;
-  color: #fff;
 }
-
 .sublist-section {
   min-height: 596px;
   background-color: #fff;
@@ -380,7 +369,6 @@
   color: #ff8b38;
 }
 .sublist-section__subtitle {
-  font-size: 14px;
   line-height: 17px;
   font-weight: 600;
   color: #212121;
@@ -393,7 +381,6 @@
     margin: 0 5% 0 0;
   }
 }
-
 .picture-section {
   height: 524px;
   background-color: #f5f5f5;
@@ -417,7 +404,6 @@
   align-items: center;
 }
 .awesome__title {
-  line-height: 43px;
   color: #212121;
 }
 .awesome__description {
@@ -451,14 +437,11 @@
   color: #ff8b38;
 }
 .awesome-items__subtitle {
-  font-family: 'Open Sans';
   font-size: 20px;
-  line-height: 24px;
   font-weight: 700;
   color: #333;
-  margin: 0 0 23px 0;
+  margin: 0 0 25px 0;
 }
-
 .pricing {
   min-height: 883px;
   background-color: #f5f5f5;
@@ -487,7 +470,6 @@
   align-items: center;
   justify-content: center;
   height: 59px;
-  font-family: 'Open Sans';
   font-size: 20px;
   font-weight: 700;
   color: #fff;
@@ -500,7 +482,7 @@
   text-align: center;
 }
 .pricing-item__cost {
-  font-family: Raleway;
+  font-family: Raleway, Arial, Helvetica, sans-serif;
   font-size: 94px;
   font-weight: 700;
   color: #fff;
@@ -511,8 +493,6 @@
 }
 .pricing-item__period {
   opacity: 0.5;
-  font-family: 'Open Sans';
-  font-size: 14px;
   font-weight: 600;
   font-style: italic;
   line-height: 24px;
@@ -526,8 +506,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Open Sans';
-  font-size: 14px;
   font-weight: 700;
   color: #fff;
   height: 40px;
@@ -544,8 +522,6 @@
   height: 40px;
   background-color: #fff;
   border-bottom: 1px solid #f5f5f5;
-  font-family: 'Open Sans';
-  font-size: 14px;
   text-transform: uppercase;
   color: #86878b;
 }
@@ -607,7 +583,6 @@
   left: 0;
 }
 .reviews__customer-name {
-  font-family: 'Open Sans';
   font-size: 20px;
   line-height: 1.2;
   font-weight: 700;
@@ -615,8 +590,8 @@
 }
 .additional {
   height: 320px;
-  padding: 74px 0 63px 0;
-  background-image: url('../images/custom_panel.png');
+  padding: 74px 0 0 0;
+  background-image: url('../images/custom_panel.webp');
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -630,7 +605,7 @@
 }
 .additional__description {
   opacity: 0.8;
-  font-family: Raleway;
+  font-family: Raleway, Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 300;
   color: #fff;
@@ -667,10 +642,9 @@
   border: none;
   padding: 4px 11px;
   box-shadow: 0px 1px 0px 0px rgba(0,0,1,0.15);
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 1.2;
-  font-weight: 400;
   color: #bdbdbd;
 }
 .contacts__form-left-item:focus {
@@ -683,45 +657,38 @@
   border: none;
   padding: 4px 11px;
   box-shadow: 0px 1px 0px 0px rgba(0,0,1,0.15);
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 1.2;
-  font-weight: 400;
   color: #bdbdbd;
 }
 .contacts__textarea:focus {
   outline: none;
 }
-.contacts__button {
+.contacts__btn {
   min-width: 148px;
   min-height: 46px;
-  font-family: 'Open Sans';
-  font-size: 15px;
-  font-weight: 600;
-  color: #fff;
 }
-.page-footer {
+.footer {
   height: 84px;
   background-color: #000;
-  padding: 20px 0 15px 0;
+  padding: 20px 0 0 0;
 }
-.page-footer__wrapper {
+.footer__wrapper {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
-.page-footer__link-list {
+.footer__link-list {
   width: 318px;
   margin: 0 0 13px 0;
 }
-.page-footer__list-item {
+.footer__list-item {
   font-size: 24px;
-  font-weight: 400;
-  color: #cccccc;
+  color: #ccc;
 }
-.page-footer__copyright {
+.footer__copyright {
   opacity: 0.5;
-  font-family: 'Open Sans';
   font-size: 12px;
   color: #fff;
 }
