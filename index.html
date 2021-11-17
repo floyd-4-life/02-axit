@@ -1,3 +1,9 @@
+<!-- TODO: Плавная прокрутка при клике на ссылку в меню -->
+<!-- TODO: Передача аргументов в функции работы с табами -->
+<!-- TODO: Padding блоков оформить шаблоном -->
+<!-- TODO: Тест на расширяемость -->
+<!-- TODO: Рефакторинг -->
+
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -6,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Axit</title>
   <link rel="shortcut icon" href="images/favicon.ico">
-  <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -15,21 +21,26 @@
       <a href="#">
         <img class="header__logo" src="images/logo.webp" alt="Logo">
       </a>
-      <nav class=" header__menu menu">
-        <ul class="menu__list">
-          <li class="menu__item"><a class="menu__link" href="#features">Features</a></li>
-          <li class="menu__item"><a class="menu__link" href="#about">About</a></li>
-          <li class="menu__item"><a class="menu__link" href="#pricing">Pricing</a></li>
-          <li class="menu__item"><a class="menu__link" href="#reviews">Reviews</a></li>
-          <li class="menu__item"><a class="menu__link" href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="header__menu menu">
+        <div class="menu__icon">
+          <span></span>
+        </div>
+        <nav class="menu__body">
+          <ul class="menu__list">
+            <li class="menu__item"><a class="menu__link" href="#features">Features</a></li>
+            <li class="menu__item"><a class="menu__link" href="#about">About</a></li>
+            <li class="menu__item"><a class="menu__link" href="#pricing">Pricing</a></li>
+            <li class="menu__item"><a class="menu__link" href="#reviews">Reviews</a></li>
+            <li class="menu__item"><a class="menu__link" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
   <main class="main">
     <section class="cover ibg">
       <img src="images/header_panel.webp" alt="">
-      <div class="container">
+      <div class="container cover__container">
         <div class="cover__content">
           <div class="cover__logo ibg">
             <img src="images/logo.webp" alt="Logo">
@@ -60,32 +71,32 @@
         </div>
         <ul class="socials social__link-list">
           <li class="socials__item">
-            <a class="socials__link social__list-item fab icon-facebook" href="https://facebook.com/"></a>
+            <a class="socials__link social__list-item fab icon-facebook" href="//facebook.com/"></a>
           </li>
           <li class="socials__item">
-            <a class="socials__link social__list-item fab icon-twitter" href="https://twitter.com"></a>
+            <a class="socials__link social__list-item fab icon-twitter" href="//twitter.com"></a>
           </li>
           <li class="socials__item">
             <a class="socials__link social__list-item fab icon-google-plus" href="404.html"></a>
           </li>
           <li class="socials__item">
-            <a class="socials__link social__list-item fab icon-pinterest" href="https://www.pinterest.com/"></a>
+            <a class="socials__link social__list-item fab icon-pinterest" href="//www.pinterest.com/"></a>
           </li>
           <li class="socials__item">
-            <a class="socials__link social__list-item fab icon-instagram" href="https://www.instagram.com"></a>
+            <a class="socials__link social__list-item fab icon-instagram" href="//www.instagram.com"></a>
           </li>
           <li class="socials__item">
-            <a class="socials__link social__list-item fab icon-stumbleupon" href="https://www.stumbleupon.com/"></a>
+            <a class="socials__link social__list-item fab icon-stumbleupon" href="//www.stumbleupon.com/"></a>
           </li>
           <li class="socials__item">
-            <a class="socials__link social__list-item fas icon-rss" href="https://rss.com/"></a>
+            <a class="socials__link social__list-item fas icon-rss" href="//rss.com/"></a>
           </li>
         </ul>
       </div>
     </section>
     <a id="features"></a>
     <section class="tabs">
-      <div class="container">
+      <div class="container tabs__container">
         <div class="tabs-triggers">
           <a class="tabs-triggers__item" href="#tab-1">TAB 1</a>
           <a class="tabs-triggers__item" href="#tab-2">TAB 2</a>
@@ -153,7 +164,7 @@
       </div>
     </section>
     <section class="picture-section">
-      <div class="container">
+      <div class="container picture-section__container">
         <div class="text picture-section__text">
           <h2 class="subtitle title--underline-orange-left">Standard Picture Section</h2>
           <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
@@ -334,25 +345,25 @@
     <div class="container footer__container">
       <ul class="socials footer__link-list">
         <li class="socials__item">
-          <a class="socials__link footer__list-item fab icon-facebook" href="https://facebook.com/"></a>
+          <a class="socials__link footer__list-item fab icon-facebook" href="//facebook.com/"></a>
         </li>
         <li class="socials__item">
-          <a class="socials__link footer__list-item fab icon-twitter" href="https://twitter.com"></a>
+          <a class="socials__link footer__list-item fab icon-twitter" href="//twitter.com"></a>
         </li>
         <li class="socials__item">
           <a class="socials__link footer__list-item fab icon-google-plus" href="404.html"></a>
         </li>
         <li class="socials__item">
-          <a class="socials__link footer__list-item fab icon-pinterest" href="https://www.pinterest.com/"></a>
+          <a class="socials__link footer__list-item fab icon-pinterest" href="//www.pinterest.com/"></a>
         </li>
         <li class="socials__item">
-          <a class="socials__link footer__list-item fab icon-instagram" href="https://www.instagram.com"></a>
+          <a class="socials__link footer__list-item fab icon-instagram" href="//www.instagram.com"></a>
         </li>
         <li class="socials__item">
-          <a class="socials__link footer__list-item fab icon-stumbleupon" href="https://www.stumbleupon.com/"></a>
+          <a class="socials__link footer__list-item fab icon-stumbleupon" href="//www.stumbleupon.com/"></a>
         </li>
         <li class="socials__item">
-          <a class="socials__link footer__list-item fas icon-rss" href="https://rss.com/"></a>
+          <a class="socials__link footer__list-item fas icon-rss" href="//rss.com/"></a>
         </li>
       </ul>
       <p class="footer__copyright">© 2015 Axure Themes</p>
