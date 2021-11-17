@@ -1,0 +1,630 @@
+@import reset
+@import fonts
+@import mixins
+@import variables
+@import header
+@import forms
+@import titles
+@import buttons
+@import footer
+
+body.--lock
+  overflow: hidden
+
+.header,
+.main,
+.footer
+  +fontFamilyPr
+  font-size: 14px
+
+.ibg
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
+  position: relative
+  img
+    width: 0
+    height: 0
+    position: absolute
+    top: 0
+    left: 0
+    opacity: 0
+    visibility: hidden
+
+.container
+  max-width: 1130px
+  height: 100%
+  +flexbox
+  justify-content: space-between
+  margin: 0 auto
+  padding: 0 15px
+
+.description
+  line-height: 20px
+  color: $c-hotel
+
+.cover
+  background-position: center bottom
+  padding: 170px 0 141px
+  @media (max-width: 992px)
+    padding: 150px 0 100px
+  @media (max-width: 767px)
+    padding: 130px 0 80px
+  @media (max-width: 576px)
+    padding: 110px 0 60px
+
+.cover__container
+  @media (max-width: 767px)
+    flex-direction: column
+
+.cover__content
+  @media (max-width: 767px)
+    width: 80%
+    margin: 0 auto
+  @media (max-width: 576px)
+    width: 100%
+
+.cover__logo
+  width: 175px
+  height: 60px
+  margin: 0 0 22px
+
+.cover__title
+  max-width: 517px
+  text-align: left
+  line-height: 1.2
+  margin-right: 15px
+  @media (max-width: 767px)
+    margin-right: 0
+
+.cover__description
+  max-width: 517px
+  opacity: .8
+  +fontFamilySc
+  font-size: 16px
+  line-height: 23px
+  font-weight: 300
+  color: $c-delta
+  margin: 0 15px 40px 0
+  @media (max-width: 767px)
+    margin: 0 0 40px
+
+.social
+  min-height: 105px
+  background-color: $c-delta
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.37)
+  padding: 22px 0
+
+.social__container
+  align-items: center
+  @media (max-width: 767px)
+    flex-direction: column
+
+.social__text
+  margin: 0 15px 0 0
+  @media (max-width: 767px)
+    margin: 0 auto 25px
+    width: 80%
+  @media (max-width: 576px)
+    width: 100%
+
+.social__subtitle
+  margin: 0 0 10px
+
+.socials
+  +flexbox
+  justify-content: space-between
+
+.socials__link
+  text-decoration: none
+  &:hover
+    color: $c-alpha
+
+.social__link-list
+  flex: 1 1 636px
+  @media (max-width: 767px)
+    width: 80%
+    flex-basis: auto
+    margin: 0 auto
+  @media (max-width: 576px)
+    width: 100%
+
+.social__list-item
+  font-size: 44px
+  color: $c-foxtrot
+  @media (max-width: 576px)
+    font-size: 30px
+
+.tabs
+  background-color: $c-echo
+  padding: 147px 0 114px
+  @media (max-width: 992px)
+    padding: 80px 0 47px
+    @media (max-width: 767px)
+      padding: 60px 0 47px
+    @media (max-width: 576px)
+      padding: 40px 0
+
+.tabs__container
+  position: relative
+
+.tabs-triggers
+  +flexbox
+  flex-direction: column
+  @media (max-width: 767px)
+    margin: 5px 0 0 0
+
+.tabs-triggers__item
+  width: 112px
+  height: 112px
+  +flexbox
+  align-items: center
+  justify-content: center
+  font-size: 15px
+  font-weight: 700
+  text-decoration: none
+  color: $c-delta
+  background-color: $c-india
+  &:first-child
+    border-radius: 3px 3px 0 0
+    border-bottom: 1px solid $c-delta
+  &:last-child
+    border-radius: 0 0 3px 3px
+    border-top: 1px solid $c-delta
+  @media (max-width: 576px)
+    width: 60px
+    height: 60px
+
+.tabs-triggers__item--active
+  background-color: $c-alpha
+
+.tabs-content
+  width: 477px
+  margin: 0 15px
+
+.tabs__subtitle
+  margin: 0 0 53px
+  @media (max-width: 576px)
+    text-align: center
+    margin: 0 auto 30px
+
+.tabs__subtitle--outside
+  padding: 0 15px 0
+
+.tabs-content__item
+  display: none
+  margin: 0 0 50px
+
+.tabs-content__item--active
+  display: block
+
+.tabs__img
+  width: 320px
+  height: 253px
+  @media (max-width: 767px)
+    display: none
+
+.sublist-section
+  background-color: $c-delta
+  padding: 107px 0 125px
+  @media (max-width: 992px)
+    padding: 80px 0
+  @media (max-width: 767px)
+    padding: 60px 0
+  @media (max-width: 576px)
+    padding: 40px 0
+
+.sublist-section__container
+  flex-direction: row
+  @media (max-width: 767px)
+    flex-direction: column
+
+.sublist-section__img
+  width: 50%
+  height: 375px
+  margin: 0 15px 0 0
+  @media (max-width: 767px)
+    width: 80%
+    order: 2
+    margin: 0 auto
+  @media (max-width: 576px)
+    width: 100%
+
+.sublist-section__text
+  width: 45%
+  @media (max-width: 767px)
+    width: 80%
+    order: 1
+    margin: 0 auto 30px
+
+  @media (max-width: 576px)
+    width: 100%
+
+.sublist-section__description
+  margin: 0 0 43px
+
+.sublist-section__items
+  +flexbox
+  flex-direction: column
+  justify-content: space-between
+
+.sublist-section__item
+  position: relative
+  margin: 0 0 38px
+  padding: 0 0 0 70px
+  &:last-child
+    margin: 0
+
+.circle
+  +flexbox
+  align-items: center
+  justify-content: center
+  border: 2px solid $c-alpha
+  border-radius: 50%
+
+.sublist-section__circle
+  width: 40px
+  height: 40px
+  position: absolute
+  top: 0
+  left: 0
+
+.sublist-section__circle-icon
+  font-size: 16px
+  color: $c-alpha
+
+.sublist-section__subtitle
+  line-height: 17px
+  font-weight: 600
+  color: $c-juliet
+
+.picture-section
+  background-color: $c-echo
+  padding: 75px 0
+  @media (max-width: 992px)
+    padding: 75px 0 55px
+  @media (max-width: 767px)
+    padding: 60px 0 55px
+  @media (max-width: 576px)
+    padding: 40px 0
+
+.picture-section__container
+  @media (max-width: 767px)
+    flex-direction: column
+
+.picture-section__text
+  width: 45%
+  padding: 37px 0 0
+  margin: 0 15px 0 0
+  @media (max-width: 767px)
+    width: 80%
+    padding: 0
+    margin: 0 auto 40px auto
+  @media (max-width: 576px)
+    width: 100%
+
+.picture-section__img
+  width: 50%
+  height: 375px
+  @media (max-width: 767px)
+    width: 80%
+    margin: 0 auto
+  @media (max-width: 576px)
+    width: 100%
+
+.awesome
+  background-color: $c-delta
+  padding: 102px 0 105px
+  @media (max-width: 992px)
+    padding: 80px 0
+  @media (max-width: 767px)
+    padding: 60px 0
+  @media (max-width: 576px)
+    padding: 40px 0
+
+.awesome__container
+  flex-direction: column
+  align-items: center
+
+.awesome__title
+
+.awesome__description
+  margin: 0 0 77px 0
+  @media (max-width: 992px)
+    margin: 0 0 60px
+  @media (max-width: 767px)
+    margin: 0 0 50px
+  @media (max-width: 576px)
+    margin: 0 0 40px
+
+.awesome-items
+  +flexbox
+  justify-content: space-between
+  margin: 0 -10px
+  @media (max-width: 992px)
+    justify-content: space-around
+    align-items: flex-start
+    flex-wrap: wrap
+
+.awesome-items__item
+  max-width: 350px
+  position: relative
+  text-align: center
+  flex: 1 1 352px
+  padding: 99px 0 0
+  margin: 0 0 40px
+  &:nth-child(2)
+    margin: 0 15px 40px
+  @media (max-width: 992px)
+    &:nth-child(2)
+      margin: 0 0 40px
+    &:last-child
+      margin: 0
+
+.awesome-items__circle
+  width: 70px
+  height: 70px
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  margin: 0 auto
+
+.awesome-items__circle-icon
+  font-size: 32px
+  color: $c-alpha
+
+.awesome-items__subtitle
+  font-size: 20px
+  font-weight: 700
+  color: $c-india
+  margin: 0 0 25px
+
+.awesome-items__description
+  max-width: 352px
+
+.pricing
+  background-color: $c-echo
+  padding: 102px 0 105px
+  @media (max-width: 992px)
+    padding: 80px 0
+  @media (max-width: 767px)
+    padding: 60px 0
+  @media (max-width: 576px)
+    padding: 40px 0
+
+.pricing__container
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+
+.pricing__description
+  line-height: normal
+  margin: 0 0 80px
+  @media (max-width: 992px)
+    margin: 0 0 60px
+  @media (max-width: 767px)
+    margin: 0 0 50px
+  @media (max-width: 576px)
+    margin: 0 0 40px
+
+.pricing__items
+  width: 100%
+  +flexbox
+  justify-content: space-between
+  align-items: flex-end
+  @media (max-width: 992px)
+    justify-content: space-around
+    align-items: flex-start
+    flex-wrap: wrap
+
+.pricing-item
+  width: 343px
+  min-width: 192px
+  +flexbox
+  flex-direction: column
+  margin: 0 0 30px
+  &:last-child
+    @media (max-width: 992px)
+      margin: 0
+  @media (max-width: 992px)
+    margin: 0 15px 30px
+  @media (max-width: 767px)
+    width: 80%
+    margin: 0 0 30px
+  @media (max-width: 576px)
+    width: 100%
+
+.pricing__professional
+  margin: 0 15px 30px
+  @media (max-width: 767px)
+    margin: 0 0 30px
+
+.pricing-item__title
+  height: 59px
+  +flexbox
+  align-items: center
+  justify-content: center
+  font-size: 20px
+  font-weight: 700
+  color: $c-delta
+  background-color: $c-india
+  border-bottom: 1px solid $c-echo
+
+.pricing-item__price
+  min-height: 151px
+  text-align: center
+  background-color: $c-india
+
+.pricing-item__cost
+  +fontFamilySc
+  font-size: 94px
+  font-weight: 700
+  color: $c-delta
+  margin: 0 0 15px
+
+.pricing-item__dollar
+  font-size: 35px
+
+.pricing-item__period
+  opacity: .5
+  font-weight: 600
+  font-style: italic
+  line-height: 24px
+  color: $c-delta
+
+.pricing-item__popular
+  height: 5px
+  background-color: $c-alpha
+
+.pricing-item__popular--most-popular
+  height: 40px
+  +flexbox
+  align-items: center
+  justify-content: center
+  font-weight: 700
+  color: $c-delta
+  &::before
+    content: 'our most popular'
+    text-transform: uppercase
+
+.pricing-item__features-list
+  flex-grow: 1
+
+.pricing-item__feature
+  height: 40px
+  +flexbox
+  align-items: center
+  justify-content: center
+  text-transform: uppercase
+  border-bottom: 1px solid $c-echo
+  color: $c-hotel
+  background-color: $c-delta
+  &:last-child
+    border: none
+
+.reviews
+  background-color: $c-delta
+  padding: 102px 0 101px
+  @media (max-width: 992px)
+    padding: 80px 0
+  @media (max-width: 767px)
+    padding: 60px 0
+  @media (max-width: 576px)
+    padding: 40px 0
+
+.reviews__container
+  flex-direction: column
+  align-items: center
+  justify-content: flex-start
+
+.reviews__description
+  margin: 0 0 57px
+  @media (max-width: 992px)
+    margin: 0 0 60px
+  @media (max-width: 767px)
+    margin: 0 0 50px
+  @media (max-width: 576px)
+    margin: 0 0 40px
+
+.reviews__items
+  width: 100%
+  +flexbox
+  justify-content: space-between
+  @media (max-width: 992px)
+    justify-content: space-around
+    flex-wrap: wrap
+
+.reviews__item
+  &:nth-child(2)
+    margin: 0 15px
+    @media (max-width: 992px)
+      margin: 0 0 30px
+  &:last-child
+    @media (max-width: 767px)
+      margin: 0
+  @media (max-width: 992px)
+    margin: 0 0 30px
+
+.reviews__quote
+  width: 273px
+  min-height: 131px
+  position: relative
+  border-radius: 2px
+  background-color: $c-echo
+  padding: 16px 12px
+  margin: 0 0 22px
+  &::after
+    content: ''
+    position: absolute
+    left: 23px
+    top: 131px
+    border: 12px solid transparent
+    border-top: 15px solid $c-echo
+
+.reviews__review-text
+  font-style: italic
+  line-height: normal
+
+.reviews__customer
+  position: relative
+  padding: 15px 0 0 85px
+
+.reviews__customer-photo
+  width: 70px
+  height: 70px
+  position: absolute
+  top: 0
+  left: 0
+  border-radius: 50%
+
+.reviews__customer-name
+  font-size: 20px
+  line-height: 1.2
+  font-weight: 700
+  color: $c-india
+
+.additional
+  padding: 68px 0 63px
+  @media (max-width: 576px)
+    padding: 35px 0
+
+.additional__container
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+
+.additional__title
+  margin: 0 0 26px
+
+.additional__description
+  opacity: .8
+  +fontFamilySc
+  font-size: 16px
+  font-weight: 300
+  color: $c-delta
+  margin: 0 0 33px
+
+.contacts
+  background-color: $c-delta
+  padding: 102px 0 80px
+  @media (max-width: 992px)
+    padding: 80px 0
+  @media (max-width: 767px)
+    padding: 60px 0
+  @media (max-width: 576px)
+    padding: 40px 0
+
+.contacts__container
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+
+.contacts__description
+  margin: 0 0 79px
+  @media (max-width: 992px)
+    margin: 0 0 60px
+  @media (max-width: 767px)
+    margin: 0 0 50px
+  @media (max-width: 576px)
+    margin: 0 0 40px

@@ -1,0 +1,72 @@
+.title
+  +fontFamilySc
+  font-size: 36px
+  text-transform: uppercase
+  text-align: center
+  position: relative
+  color: $c-juliet
+
+.title--white
+  color: $c-delta
+
+.title--underline-orange-left
+  padding: 0 0 27px 0
+  margin: 0 0 27px 0
+  &::after
+    content: ''
+    position: absolute
+    width: 64px
+    bottom: 0
+    left: 0
+    height: 2px
+    background-color: $c-alpha
+
+.title--underline-orange-center
+  padding: 0 0 27px 0
+  margin: 0 0 27px 0
+  &::after
+    content: ''
+    position: absolute
+    width: 64px
+    bottom: 0
+    left: 0
+    right: 0
+    margin: 0 auto
+    height: 2px
+    background-color: $c-alpha
+
+.title--underline-white-left
+  padding-bottom: 35px
+  margin: 0 0 36px 0
+  &::after
+    content: ''
+    position: absolute
+    width: 64px
+    bottom: 0
+    left: 0
+    height: 2px
+    background-color: $c-delta
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2)
+
+.title--underline-white-center
+  color: $c-delta
+  padding-bottom: 35px
+  margin: 0 0 36px 0
+  &::after
+    content: ''
+    position: absolute
+    width: 64px
+    bottom: 0
+    left: 0
+    right: 0
+    margin: 0 auto
+    height: 2px
+    background-color: $c-delta
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2)
+
+.subtitle
+  position: relative
+  font-size: 20px
+  line-height: 1.2
+  font-weight: 700
+  color: $c-juliet
